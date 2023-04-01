@@ -80,13 +80,15 @@ int main(int argc,char *argv[])
                 if (op2==0 && op1!=0){// no tiene sentido verificar op2, debe ser 0 mientras op1 sea 0, pero lo dejo para claridad //Instruccion con 2 operandos
                     valorOp1=getValor(op1,MemoriaPrincipal,Registros);
                     setReg(IP,getReg(IP,Registros)+op1,&Registros);
+                    if (error==0){
+                        funciones1op[operacion](&valorOp1,MemoriaPrincipal,&Registros);
 
-                    funciones1op[operacion](&valorOp1,MemoriaPrincipal,&Registros);
-
-                    almacenaValor(op1,valorOp1,MemoriaPrincipal,&Registros);//puede que no cambie el valor pero se lo asigno nuevamente porq paja. Deberia almacenarlo en la funcion
+                        almacenaValor(op1,valorOp1,MemoriaPrincipal,&Registros);//puede que no cambie el valor pero se lo asigno nuevamente porq paja. Deberia almacenarlo en la funcion
+                    }
                 }
+
                 else
-                    if (parametro=='d')
+                    if (parametro=='d' && error==0)
                         printf("STOP");
             }
         }
