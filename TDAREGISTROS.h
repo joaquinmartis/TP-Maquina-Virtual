@@ -18,8 +18,8 @@
 typedef long int T_Registro;
 typedef TRegistro[TAM_REGISTROS] T_Registros;
 
-void setGPReg(char XX,T_Registro,long int valor);
-T_Registro getReg(char XX,T_Registro); //XX se refiere a si es EFX, FX, FL o FH. Las posibilidades son L,H,X y E
+void setGPReg(char XX,T_Registro,long int valor,T_Registros);
+T_Registro* getReg(char XX,T_Registro,T_Registros); //XX se refiere a si es EFX, FX, FL o FH. Las posibilidades son L,H,X y E o como esta en la documentacion 00 01 10 11
 
 
 

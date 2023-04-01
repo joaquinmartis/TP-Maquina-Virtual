@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "TDATDDS.h"
+#include "TDAOPERACIONES.h"
+#include "TDAREGISTROS.h"
+#include "TDAFUNCIONES.h"
+
+
 
 
 // CONSTANTES
@@ -16,14 +21,25 @@ void cargaCodigo(T_VecMemoriaPriPal,T_TDDS*,int*);
 //--------------------------------------
 
 //MAIN
-int main(int argc)//FALTAN ARGUMENTOS
+int main(int argc,char *argv[])
 {
     T_VecMemoriaPriPal MemoriaPrincipal;
-    unsigned int IP=0; //Instruction Pointer
     T_TDDS TDDS;
-    TDDS.
     cargaCodigo(MemoriaPrincipal,&TDDS,&IP);//Ver descripcion en la definicion en la funcion.
 
+
+
+    while (CODIGOOPERACION!=STOP o IP>tamano del CS){
+        //TOMA INSTRUCCION
+        //AVANZA IP
+        //ANALIZA INSTRUCCION
+        //OBTIENE CODIGO DE OPERACION Y TIPOS DE OPERANDOS
+        //LEVANTA DE LA MEMORIA DEL CODIGO VALORES DE LOS OPERANDOS, TAMBIEN SI ESTA EN DATA SEGMENT LEVANTA EL VALOR DESDE AHI
+        //EJECUTA OPERACION (si se ejecuta con -d debe mostrar tambien por pantalla lo que hace.
+        //(SI FUERA NECESARIO) REASIGNA VALORES OBTENIDOS A LOS REGISTROS O A LOS ESPACIOS EN MEMORIA INDICADOS
+        //SIGUIENTE OPERACION
+    }
+    printf("Programa finalizado");
     return 0;
 }
 
