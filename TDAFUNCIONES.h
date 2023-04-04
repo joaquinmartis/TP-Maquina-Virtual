@@ -21,7 +21,7 @@ void xor(int*,int*);
 
 //1 operando:
 //TODOS TRABAJAN CON UN OPERANDO, LOS REGISTROS y MemoriaPrincipal, ALGUNOS LOS USAN ALGUNOS NO
-void sys(int *,T_Registros*,MemoriaPrincipal);
+void sys(int *,T_Registros*,T_VecMemoriaPriPal);
 void jmp(int *,T_Registros*,T_VecMemoriaPriPal);
 void jz(int *,T_Registros*,T_VecMemoriaPriPal);
 void jp(int *,T_Registros*,T_VecMemoriaPriPal);
